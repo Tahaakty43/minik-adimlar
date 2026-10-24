@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Minik Adımlar</title>
+<meta name="description" content="Anne karnından 10 yaşına kadar büyüme, gelişim, aşılar ve dikkat edilmesi gerekenler — bilimsel kaynaklara dayalı rehber.">
+<meta name="theme-color" content="#2a78d6">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Minik Adımlar">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app" id="app">
+  <header class="appbar">
+    <button class="appbar-btn" id="backBtn" aria-label="Geri" hidden>
+      <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <div class="appbar-title">
+      <span class="appbar-kicker" id="appKicker">Minik Adımlar</span>
+      <h1 id="appTitle">Merhaba!</h1>
+    </div>
+    <button class="appbar-btn" id="themeBtn" aria-label="Açık/koyu tema">
+      <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
+    </button>
+    <button class="avatar-btn" id="profileBtn" aria-label="Profil"></button>
+  </header>
+
+  <main id="view" class="view"></main>
+
+  <nav class="bottomnav" aria-label="Ana menü">
+    <button data-route="home" aria-label="Ana sayfa">
+      <svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>Ana sayfa</span></button>
+    <button data-route="stages" aria-label="Evreler">
+      <svg viewBox="0 0 24 24"><path d="M4 18c3-1 4-5 8-5s5 4 8 5M12 13V5m0 0l-3 3m3-3l3 3"/></svg><span>Evreler</span></button>
+    <button data-route="growth" aria-label="Büyüme">
+      <svg viewBox="0 0 24 24"><path d="M4 20V4m0 16h16M7 16c3-1 5-5 7-8s4-3 6-3"/></svg><span>Büyüme</span></button>
+    <button data-route="vaccines" aria-label="Aşılar">
+      <svg viewBox="0 0 24 24"><path d="M17 3l4 4m-2-2l-9 9m-3 0l3 3m-6 3l3-3m1-7l6 6"/></svg><span>Aşılar</span></button>
+    <button data-route="more" aria-label="Daha fazla">
+      <svg viewBox="0 0 24 24"><path d="M5 5h5v5H5zm9 0h5v5h-5zM5 14h5v5H5zm9 0h5v5h-5z"/></svg><span>Daha fazla</span></button>
+  </nav>
+
+  <div class="sheet-backdrop" id="sheetBackdrop" hidden></div>
+  <section class="sheet" id="sheet" role="dialog" aria-modal="true" hidden>
+    <div class="sheet-handle"></div>
+    <div id="sheetBody"></div>
+  </section>
+</div>
+
+<div id="tooltip" class="tooltip" role="status" hidden></div>
+
+<script src="js/growth-data.js"></script>
+<script src="js/content.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/illustration.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
